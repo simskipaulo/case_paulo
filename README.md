@@ -31,4 +31,14 @@ Siga os passos abaixo para configurar o projeto localmente:
 
 1. Clone o repositório:
    ```bash
-   https://github.com/simskipaulo/case_paulo
+   git clone https://github.com/simskipaulo/case_paulo.git cd paulo_case
+   
+2. Crie e ative um ambiente virtual:
+   ```bash
+   python -m venv env
+   source env/bin/activate # Linux/Mac
+   env\Scripts\activate # Windows
+   
+3.Instale as dependências:
+   ```bash
+   pip install -r requirements.txt
