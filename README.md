@@ -31,11 +31,12 @@ Siga os passos abaixo para configurar o projeto localmente:
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/simskipaulo/case_paulo.git cd paulo_case
+   git clone https://github.com/simskipaulo/case_paulo.git
+   cd paulo_case
    
 2. Crie e ative um ambiente virtual:
    ```bash
-   python -m venv env
+   python -m venv venv
    source env/bin/activate # Linux/Mac
    env\Scripts\activate # Windows
    
@@ -46,10 +47,16 @@ Siga os passos abaixo para configurar o projeto localmente:
 4. Execute as migrações do banco de dados:
    ```bash
    python manage.py migrate
-5. Inicie o servidor de desenvolvimento:
+   
+5. Coleta de arquivos estáticos:
+   ```bash
+   python manage.py collectstatic
+   
+6. Aplicativo inicial:
    ```bash
    python manage.py runserver
-6. Acesse o projeto no navegador em http://localhost:8000.
+   
+7. Agora o projeto estará acessível em http://127.0.0.1:8000/
 
 ## Estrutura do Projeto
    ```bash
@@ -58,12 +65,13 @@ Siga os passos abaixo para configurar o projeto localmente:
 │   ├── urls.py
 │   ├── wsgi.py
 │   └── asgi.py
-├── static/
-│   ├── css/
-│   └── js/
+├── staticfiles/
+│   ├── admin/
+│   └── css/
 ├── paulo_app
 │   ├── templates/
 │   ├── migrations/
+│   ├── static/
 │   └── [arquivos.py]
 ├── db.sqlite3
 └── manage.py
