@@ -1,0 +1,7 @@
+<h1>Excluir Produto</h1>
+<p>Tem certeza de que deseja excluir"?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">SIM</button>
+</form>
+<a href="{% url 'lista_produtos' %}">Cancelar</a>
