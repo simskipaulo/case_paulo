@@ -3,48 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/bootstrap.css' %}">
     <title>Aplicativo Base</title>
-    <style>
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            gap: 10px;
-            background-color: #f0f0f0;
-            padding: 10px;
-        }
-
-        nav li {
-            margin: 0;
-        }
-
-        nav a {
-            text-decoration: none;
-            padding: 10px 15px;
-            color: #333;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        nav a:hover {
-            background-color: #007bff;
-            color: white;
-        }
-
-        .tab-content {
-            padding: 20px;
-            background-color: #ffffff;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-    </style>
 </head>
 <body>
 
     <nav>
-        <ul>
-            <li><a href="{% url 'aba1' %}"><i class="fas fa-home"></i> Aba 1</a></li>
-            <li><a href="{% url 'aba2' %}"><i class="fas fa-cogs"></i> Aba 2</a></li>
+        <ul class= 'list-group'>
+            <li class= 'list-group-item'><a href="{% url 'aba1' %}"><i class="fas fa-home"></i> Aba 1</a></li>
+            <li class= 'list-group-item'><a href="{% url 'aba2' %}"><i class="fas fa-cogs"></i> Aba 2</a></li>
         </ul>
     </nav>
 

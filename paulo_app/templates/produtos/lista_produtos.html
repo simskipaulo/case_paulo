@@ -12,8 +12,8 @@
     <tr>
         <td>{{ produto.nome }}</td>
         <td>{{ produto.preco }}</td>
-        <td>{{ produto.quantidade_estoque }}</td>
-        <td>{{ produto.data_criacao }}</td>
+        <td>{{ produto.estoque }}</td>
+        <td>{{ produto.criacao }}</td>
         <td>
             <a href="{% url 'editar_produto' produto.id %}">Editar</a>
             <a href="{% url 'excluir_produto' produto.id %}">Excluir</a>
