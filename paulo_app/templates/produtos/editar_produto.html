@@ -1,7 +1,23 @@
-<h1>{{ form.instance.id|yesno:"Editar Produto,Novo Produto" }}</h1>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Salvar</button>
-</form>
-<a href="{% url 'lista_produtos' %}">Voltar</a>
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <title>{{ form.instance.id|yesno:"Editar Produto,Novo Produto" }}</title>
+</head>
+<body class="container mt-5">
+
+    <h1 class="text-center text-primary">{{ form.instance.id|yesno:"Editar Produto,Novo Produto" }}</h1>
+    <form method="post" class="border p-4 bg-light shadow rounded">
+        {% csrf_token %}
+        <div class="mb-3">
+            {{ form.as_p }}
+        </div>
+        <button type="submit" class="btn btn-success">Salvar</button>
+    </form>
+    <a href="{% url 'lista_produtos' %}" class="btn btn-secondary mt-3">Voltar</a>
+
+</body>
+</html>
