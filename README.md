@@ -31,3 +31,4 @@ Siga os passos abaixo para configurar o projeto localmente:
 
 1. Clone o repositório:
    ```bash
+   https://github.com/simskipaulo/case_paulo
